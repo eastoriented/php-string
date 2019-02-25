@@ -1,0 +1,255 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "7903e405b0dddc8f5cf806dc68dfad7f",
+    "packages": [
+        {
+            "name": "eastoriented/php-block",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eastoriented/php-block.git",
+                "reference": "1a1b7459c7dfef3eb4bf56032f7f3864edaf1d09"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eastoriented/php-block/zipball/1a1b7459c7dfef3eb4bf56032f7f3864edaf1d09",
+                "reference": "1a1b7459c7dfef3eb4bf56032f7f3864edaf1d09",
+                "shasum": ""
+            },
+            "require-dev": {
+                "atoum/atoum": "^3",
+                "eastoriented/library": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "eastoriented\\php\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Frédéric Hardy",
+                    "email": "frederic.hardy@mageekbox.net"
+                }
+            ],
+            "description": "A PHP library to emulate Smalltalk block",
+            "time": "2019-02-12T15:18:55+00:00"
+        },
+        {
+            "name": "eastoriented/php-container",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eastoriented/php-container.git",
+                "reference": "7be5cdb488ca84a000c0e2d030bc45a0e31c60a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eastoriented/php-container/zipball/7be5cdb488ca84a000c0e2d030bc45a0e31c60a0",
+                "reference": "7be5cdb488ca84a000c0e2d030bc45a0e31c60a0",
+                "shasum": ""
+            },
+            "require": {
+                "eastoriented/php-block": "dev-master"
+            },
+            "require-dev": {
+                "atoum/atoum": "^3",
+                "eastoriented/library": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "eastoriented\\php\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Frédéric Hardy",
+                    "email": "frederic.hardy@mageekbox.net"
+                }
+            ],
+            "description": "A PHP library to iterate over values in container",
+            "time": "2019-02-12T15:21:09+00:00"
+        },
+        {
+            "name": "eastoriented/php-test",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eastoriented/php-test.git",
+                "reference": "193961bf9a71893d9bd0ddbe59177145f11c906d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eastoriented/php-test/zipball/193961bf9a71893d9bd0ddbe59177145f11c906d",
+                "reference": "193961bf9a71893d9bd0ddbe59177145f11c906d",
+                "shasum": ""
+            },
+            "require": {
+                "eastoriented/php-block": "dev-master"
+            },
+            "require-dev": {
+                "atoum/atoum": "^3",
+                "eastoriented/library": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "eastoriented\\php\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Frédéric Hardy",
+                    "email": "frederic.hardy@mageekbox.net"
+                }
+            ],
+            "description": "A PHP library which define `if` as object",
+            "time": "2019-02-14T16:42:17+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "atoum/atoum",
+            "version": "3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atoum/atoum.git",
+                "reference": "c5279d0ecd4e2d53af6b38815db2cafee8fc46b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atoum/atoum/zipball/c5279d0ecd4e2d53af6b38815db2cafee8fc46b6",
+                "reference": "c5279d0ecd4e2d53af6b38815db2cafee8fc46b6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-hash": "*",
+                "ext-json": "*",
+                "ext-tokenizer": "*",
+                "ext-xml": "*",
+                "php": "^5.6.0 || ^7.0.0 <7.4.0"
+            },
+            "replace": {
+                "mageekguy/atoum": "*"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2"
+            },
+            "suggest": {
+                "atoum/stubs": "Provides IDE support (like autocompletion) for atoum",
+                "ext-mbstring": "Provides support for UTF-8 strings",
+                "ext-xdebug": "Provides code coverage report (>= 2.3)"
+            },
+            "bin": [
+                "bin/atoum"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "classes/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Frédéric Hardy",
+                    "email": "frederic.hardy@atoum.org",
+                    "homepage": "http://blog.mageekbox.net"
+                },
+                {
+                    "name": "François Dussert",
+                    "email": "francois.dussert@atoum.org"
+                },
+                {
+                    "name": "Gérald Croes",
+                    "email": "gerald.croes@atoum.org"
+                },
+                {
+                    "name": "Julien Bianchi",
+                    "email": "julien.bianchi@atoum.org"
+                },
+                {
+                    "name": "Ludovic Fleury",
+                    "email": "ludovic.fleury@atoum.org"
+                }
+            ],
+            "description": "Simple modern and intuitive unit testing framework for PHP 5.3+",
+            "homepage": "http://www.atoum.org",
+            "keywords": [
+                "TDD",
+                "atoum",
+                "test",
+                "unit testing"
+            ],
+            "time": "2018-03-15T22:46:39+00:00"
+        },
+        {
+            "name": "eastoriented/library",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eastoriented/library.git",
+                "reference": "cb14e074cc9557cd627be4350cb70c9467b9934c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eastoriented/library/zipball/cb14e074cc9557cd627be4350cb70c9467b9934c",
+                "reference": "cb14e074cc9557cd627be4350cb70c9467b9934c",
+                "shasum": ""
+            },
+            "bin": [
+                "resources/bin/eastoriented-library"
+            ],
+            "type": "project",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Frédéric Hardy",
+                    "email": "frederic.hardy@mageekbox.net"
+                }
+            ],
+            "description": "A blueprint to setup a develoment environment for library with docker",
+            "time": "2019-02-10T15:52:45+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "eastoriented/php-container": 20,
+        "eastoriented/php-test": 20,
+        "eastoriented/library": 20,
+        "eastoriented/php-block": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
