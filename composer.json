@@ -1,4 +1,14 @@
 {
+	"name": "eastoriented/php-string",
+	"description": "A PHP library to manage string",
+	"type": "library",
+	"license": "BSD-2-Clause",
+	"authors": [
+		{
+			"name": "Frédéric Hardy",
+			"email": "frederic.hardy@mageekbox.net"
+		}
+	],
 	"require-dev": {
 		"eastoriented/library": "dev-master",
 		"atoum/atoum": "^3"
