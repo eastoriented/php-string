@@ -1,7 +1,7 @@
 <?php namespace eastoriented\php\string\provider\aggregator;
 
 use eastoriented\php\{ block, string\provider, string\recipient\functor, test\variable\defined, test\recipient\ifTrue\functor as ifTrue };
-use eastoriented\container\iterator\{ fifo, block\functor as iteratorBlock };
+use eastoriented\php\container\iterator\{ fifo, block\functor as iteratorBlock };
 
 class all
 {

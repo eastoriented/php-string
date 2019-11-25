@@ -49,7 +49,7 @@ class all extends units\test
 			->given(
 				$this->newTestedInstance(
 					$stringProvider,
-					$otherStringProvider = new mockOfScore\php\string\provider
+					$otherStringProvider = new mockOfProvider
 				),
 
 				$otherString = uniqid(),

@@ -3,7 +3,7 @@
 require __DIR__ . '/../../runner.php';
 
 use eastoriented\tests\units;
-use mock\eastoriented\php as mockOfScore;
+use mock\eastoriented\php as mockOfPhp;
 
 class pcre extends units\test
 {
@@ -29,7 +29,7 @@ class pcre extends units\test
 			->given(
 				$this->newTestedInstance($regex = '/^.*$/'),
 				$string = uniqid(),
-				$recipient = new mockOfScore\php\test\recipient
+				$recipient = new mockOfPhp\test\recipient
 			)
 			->if(
 				$this->testedInstance->recipientOfRegexMatchingAgainstStringIs($string, $recipient)

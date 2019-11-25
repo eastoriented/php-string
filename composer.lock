@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7903e405b0dddc8f5cf806dc68dfad7f",
+    "content-hash": "4e7a03483b472096f058f53b5711ead5",
     "packages": [
         {
             "name": "eastoriented/php-block",
@@ -49,12 +49,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eastoriented/php-container.git",
-                "reference": "7be5cdb488ca84a000c0e2d030bc45a0e31c60a0"
+                "reference": "bc34e5899322e10ef5d8042f061db68e5b47f0d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eastoriented/php-container/zipball/7be5cdb488ca84a000c0e2d030bc45a0e31c60a0",
-                "reference": "7be5cdb488ca84a000c0e2d030bc45a0e31c60a0",
+                "url": "https://api.github.com/repos/eastoriented/php-container/zipball/bc34e5899322e10ef5d8042f061db68e5b47f0d7",
+                "reference": "bc34e5899322e10ef5d8042f061db68e5b47f0d7",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
                 }
             ],
             "description": "A PHP library to iterate over values in container",
-            "time": "2019-02-12T15:21:09+00:00"
+            "time": "2019-02-13T08:44:44+00:00"
         },
         {
             "name": "eastoriented/php-test",
@@ -214,12 +214,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eastoriented/library.git",
-                "reference": "cb14e074cc9557cd627be4350cb70c9467b9934c"
+                "reference": "29a1c281c77c20c539e4df5707b8fd33ca81818f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eastoriented/library/zipball/cb14e074cc9557cd627be4350cb70c9467b9934c",
-                "reference": "cb14e074cc9557cd627be4350cb70c9467b9934c",
+                "url": "https://api.github.com/repos/eastoriented/library/zipball/29a1c281c77c20c539e4df5707b8fd33ca81818f",
+                "reference": "29a1c281c77c20c539e4df5707b8fd33ca81818f",
                 "shasum": ""
             },
             "bin": [
@@ -237,16 +237,16 @@
                 }
             ],
             "description": "A blueprint to setup a develoment environment for library with docker",
-            "time": "2019-02-10T15:52:45+00:00"
+            "time": "2019-10-04T10:24:14+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "eastoriented/php-block": 20,
         "eastoriented/php-container": 20,
         "eastoriented/php-test": 20,
-        "eastoriented/library": 20,
-        "eastoriented/php-block": 20
+        "eastoriented/library": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

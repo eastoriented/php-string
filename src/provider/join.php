@@ -2,8 +2,7 @@
 
 use eastoriented\php\string\{ provider, recipient, recipient\functor, operator };
 use eastoriented\php\test\{ defined, recipient\ifTrue\functor as ifTrue };
-use eastoriented\container\iterator\{ block\functor as iteratorBlock };
-use eastoriented\container\fifo;
+use eastoriented\php\container\iterator\{ fifo, block\functor as iteratorBlock };
 
 class join
 	implements
@@ -30,11 +29,9 @@ class join
 						$buffer = new recipient\buffer\join($glue);
 
 						(
-							new fifo(
-								... $this->providers
-							)
+							new fifo
 						)
-							->blockForIteratorIs(
+							->variablesForIteratorBlockAre(
 								new iteratorBlock(
 									function($iterator, $provider) use ($buffer)
 									{
@@ -44,7 +41,8 @@ class join
 											)
 										;
 									}
-								)
+								),
+								... $this->providers
 							)
 						;
 

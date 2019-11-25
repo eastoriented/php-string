@@ -63,7 +63,7 @@ class join extends test
 					$glue,
 					$provider,
 					$otherProvider ,
-					$anotherProvider = new mockOfScore\php\string\provider
+					$anotherProvider = new provider
 				),
 
 				$stringFromAnotherProvider = uniqid(),
