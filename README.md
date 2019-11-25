@@ -1,10 +1,6 @@
-# 
-
-
+# eastoriented/php-string [![Build Status](https://travis-ci.org/eastoriented/php-string.svg?branch=master)](https://travis-ci.org/eastoriented/php-string) [![Coverage Status](https://coveralls.io/repos/github/eastoriented/php-string/badge.svg?branch=master)](https://coveralls.io/github/eastoriented/php-string?branch=master)
 
 ## About
-
-
 
 ## Contributing
 
