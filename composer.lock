@@ -12,18 +12,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eastoriented/php-block.git",
-                "reference": "1a1b7459c7dfef3eb4bf56032f7f3864edaf1d09"
+                "reference": "f5ca7fbfc4d233f4bd4eaf484cbfe5d2be6bd5f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eastoriented/php-block/zipball/1a1b7459c7dfef3eb4bf56032f7f3864edaf1d09",
-                "reference": "1a1b7459c7dfef3eb4bf56032f7f3864edaf1d09",
+                "url": "https://api.github.com/repos/eastoriented/php-block/zipball/f5ca7fbfc4d233f4bd4eaf484cbfe5d2be6bd5f6",
+                "reference": "f5ca7fbfc4d233f4bd4eaf484cbfe5d2be6bd5f6",
                 "shasum": ""
             },
             "require-dev": {
                 "atoum/atoum": "^3",
                 "eastoriented/library": "dev-master"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -41,7 +42,11 @@
                 }
             ],
             "description": "A PHP library to emulate Smalltalk block",
-            "time": "2019-02-12T15:18:55+00:00"
+            "support": {
+                "issues": "https://github.com/eastoriented/php-block/issues",
+                "source": "https://github.com/eastoriented/php-block/tree/master"
+            },
+            "time": "2019-10-30T09:41:32+00:00"
         },
         {
             "name": "eastoriented/php-container",
@@ -49,12 +54,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eastoriented/php-container.git",
-                "reference": "bc34e5899322e10ef5d8042f061db68e5b47f0d7"
+                "reference": "fae7ce9c10f0df6107494b87cb373313faf8a80b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eastoriented/php-container/zipball/bc34e5899322e10ef5d8042f061db68e5b47f0d7",
-                "reference": "bc34e5899322e10ef5d8042f061db68e5b47f0d7",
+                "url": "https://api.github.com/repos/eastoriented/php-container/zipball/fae7ce9c10f0df6107494b87cb373313faf8a80b",
+                "reference": "fae7ce9c10f0df6107494b87cb373313faf8a80b",
                 "shasum": ""
             },
             "require": {
@@ -64,6 +69,7 @@
                 "atoum/atoum": "^3",
                 "eastoriented/library": "dev-master"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -81,7 +87,11 @@
                 }
             ],
             "description": "A PHP library to iterate over values in container",
-            "time": "2019-02-13T08:44:44+00:00"
+            "support": {
+                "issues": "https://github.com/eastoriented/php-container/issues",
+                "source": "https://github.com/eastoriented/php-container/tree/master"
+            },
+            "time": "2019-10-30T09:48:46+00:00"
         },
         {
             "name": "eastoriented/php-test",
@@ -89,21 +99,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eastoriented/php-test.git",
-                "reference": "193961bf9a71893d9bd0ddbe59177145f11c906d"
+                "reference": "8b7a0fc5da3904700cc260265306de430bb7d11d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eastoriented/php-test/zipball/193961bf9a71893d9bd0ddbe59177145f11c906d",
-                "reference": "193961bf9a71893d9bd0ddbe59177145f11c906d",
+                "url": "https://api.github.com/repos/eastoriented/php-test/zipball/8b7a0fc5da3904700cc260265306de430bb7d11d",
+                "reference": "8b7a0fc5da3904700cc260265306de430bb7d11d",
                 "shasum": ""
             },
             "require": {
-                "eastoriented/php-block": "dev-master"
+                "eastoriented/php-block": "dev-master",
+                "eastoriented/php-container": "dev-master"
             },
             "require-dev": {
                 "atoum/atoum": "^3",
                 "eastoriented/library": "dev-master"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -121,22 +133,26 @@
                 }
             ],
             "description": "A PHP library which define `if` as object",
-            "time": "2019-02-14T16:42:17+00:00"
+            "support": {
+                "issues": "https://github.com/eastoriented/php-test/issues",
+                "source": "https://github.com/eastoriented/php-test/tree/master"
+            },
+            "time": "2019-11-17T22:42:26+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "atoum/atoum",
-            "version": "3.3.0",
+            "version": "3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atoum/atoum.git",
-                "reference": "c5279d0ecd4e2d53af6b38815db2cafee8fc46b6"
+                "reference": "e90606b89e62c5c18c5d02596078edf55f35b3c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atoum/atoum/zipball/c5279d0ecd4e2d53af6b38815db2cafee8fc46b6",
-                "reference": "c5279d0ecd4e2d53af6b38815db2cafee8fc46b6",
+                "url": "https://api.github.com/repos/atoum/atoum/zipball/e90606b89e62c5c18c5d02596078edf55f35b3c3",
+                "reference": "e90606b89e62c5c18c5d02596078edf55f35b3c3",
                 "shasum": ""
             },
             "require": {
@@ -144,7 +160,7 @@
                 "ext-json": "*",
                 "ext-tokenizer": "*",
                 "ext-xml": "*",
-                "php": "^5.6.0 || ^7.0.0 <7.4.0"
+                "php": "^5.6.0 || ^7.0.0 <7.5.0"
             },
             "replace": {
                 "mageekguy/atoum": "*"
@@ -206,7 +222,11 @@
                 "test",
                 "unit testing"
             ],
-            "time": "2018-03-15T22:46:39+00:00"
+            "support": {
+                "issues": "https://github.com/atoum/atoum/issues",
+                "source": "https://github.com/atoum/atoum/tree/3.4.2"
+            },
+            "time": "2020-03-04T10:29:09+00:00"
         },
         {
             "name": "eastoriented/library",
@@ -214,14 +234,15 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eastoriented/library.git",
-                "reference": "29a1c281c77c20c539e4df5707b8fd33ca81818f"
+                "reference": "fa68b6b23236766934f7ba2ef8e84bd760f8c5d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eastoriented/library/zipball/29a1c281c77c20c539e4df5707b8fd33ca81818f",
-                "reference": "29a1c281c77c20c539e4df5707b8fd33ca81818f",
+                "url": "https://api.github.com/repos/eastoriented/library/zipball/fa68b6b23236766934f7ba2ef8e84bd760f8c5d1",
+                "reference": "fa68b6b23236766934f7ba2ef8e84bd760f8c5d1",
                 "shasum": ""
             },
+            "default-branch": true,
             "bin": [
                 "resources/bin/eastoriented-library"
             ],
@@ -237,7 +258,11 @@
                 }
             ],
             "description": "A blueprint to setup a develoment environment for library with docker",
-            "time": "2019-10-04T10:24:14+00:00"
+            "support": {
+                "issues": "https://github.com/eastoriented/library/issues",
+                "source": "https://github.com/eastoriented/library/tree/master"
+            },
+            "time": "2020-12-29T16:26:37+00:00"
         }
     ],
     "aliases": [],
@@ -251,5 +276,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
