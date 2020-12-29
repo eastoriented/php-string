@@ -11,7 +11,7 @@
 	],
 	"require-dev": {
 		"eastoriented/library": "dev-master",
-		"atoum/atoum": "^3"
+		"atoum/atoum": "^4"
 	},
 	"autoload": {
 		"psr-4": {
