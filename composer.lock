@@ -234,12 +234,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eastoriented/library.git",
-                "reference": "fa68b6b23236766934f7ba2ef8e84bd760f8c5d1"
+                "reference": "110b64330219195e183395a1c3b04b86ef2a0167"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eastoriented/library/zipball/fa68b6b23236766934f7ba2ef8e84bd760f8c5d1",
-                "reference": "fa68b6b23236766934f7ba2ef8e84bd760f8c5d1",
+                "url": "https://api.github.com/repos/eastoriented/library/zipball/110b64330219195e183395a1c3b04b86ef2a0167",
+                "reference": "110b64330219195e183395a1c3b04b86ef2a0167",
                 "shasum": ""
             },
             "default-branch": true,
@@ -262,7 +262,7 @@
                 "issues": "https://github.com/eastoriented/library/issues",
                 "source": "https://github.com/eastoriented/library/tree/master"
             },
-            "time": "2020-12-29T16:26:37+00:00"
+            "time": "2020-12-30T14:34:32+00:00"
         }
     ],
     "aliases": [],
