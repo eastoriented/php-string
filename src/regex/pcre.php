@@ -23,7 +23,7 @@ class pcre
 		)
 			->recipientOfTestOnVariableIs(
 				preg_match($regex, ''),
-				new ifTrue\exception(new\invalidArgumentException('Syntax error in regular expression'))
+				new ifTrue\exception(new \invalidArgumentException('Syntax error in regular expression'))
 			)
 		;
 

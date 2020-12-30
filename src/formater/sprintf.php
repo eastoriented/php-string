@@ -22,11 +22,16 @@ class sprintf
 
 	function stringsForRecipientOfFormatedStringAre(recipient $recipient, string... $strings) :void
 	{
-		(
-			new isNotFalse\strictly(
-				$formatedString = @sprintf($this->format, ...$strings)
-			)
-		)
+		try
+		{
+			$formatedString = @sprintf($this->format, ...$strings);
+		}
+		catch (\argumentCountError $error)
+		{
+			$formatedString = false;
+		}
+
+		(new isNotFalse\strictly($formatedString))
 			->recipientOfTestIs(
 				new ifTrue(
 					function() use ($recipient, $formatedString)
