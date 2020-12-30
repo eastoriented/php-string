@@ -22,6 +22,8 @@ jobs:
         with:
           php-version: ${{ matrix.php-versions }}
           coverage: xdebug
+          tools: composer:v2
+          ini-values: xdebug.overload_var_dump=0
 
       - name: Get composer cache directory
         id: composer-cache
