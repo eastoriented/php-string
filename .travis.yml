@@ -1,5 +1,9 @@
 language: php
 
+env:
+  global:
+    - XDEBUG_MODE=off
+
 php:
   - 7.1
   - 7.2
@@ -8,7 +12,6 @@ php:
   - 8.0
 
 before_script:
-  - echo "xdebug.mode=off" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - composer install
 
 script:
