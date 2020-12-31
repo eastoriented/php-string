@@ -15,12 +15,14 @@ else
 
 include .do_not_touch/config.mk
 
-THIS_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
-RESOURCES_DIR := $(THIS_DIR)/resources
-MKDIR=mkdir -p
-RM=rm -rf
+THIS_DIR:=$(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+RESOURCES_DIR:=$(THIS_DIR)/resources
+MKDIR:=mkdir -p
+RM:=rm -rf
+MV:=mv -f
 DOCKER_COMPOSE:=$(shell which docker-compose || echo 'bin/docker-compose')
 CURRENT_VERSION:=$(shell git describe --tags --abbrev=0 2>/dev/null || echo 0.0.0)
+INSTALLED_PHP_VERSION:=$(shell grep -e "^\s\+php-\([^:]\+\)" docker-compose.yml docker-compose.override.yml 2>/dev/null | cut -d: -f2 | cut -d- -f2 | sort | uniq || true)
 
 ifneq ($(WITH_DEBUG),)
 OLD_SHELL := $(SHELL)
@@ -46,6 +48,12 @@ define write
 echo $2 >> $1
 endef
 
+define switch-php
+cat .env | grep -v PHP_VERSION > .env.php-$1 && $(MV) .env.php-$1 .env
+$(call write,.env,"PHP_VERSION=$1");
+bin/composer install
+endef
+
 .SILENT:
 
 .SUFFIXES:
@@ -63,21 +71,21 @@ install: $(call locate,docker) bin/php bin/composer ## <Install> Install develop
 	$(call write,$@,"HOME=$(HOME)")
 	$(call write,$@,"USER_ID=$$(id -u):$$(id -g)")
 
-bin/php: | docker-compose.yml bin/. $(DOCKER_COMPOSE) ## <Install> Create wrapper for `php` using `docker`
-	$(call binary,$@,php-cli,php)
+bin/php: | docker-compose.yml bin/. $(DOCKER_COMPOSE) ## <Binaries> Create wrapper for `php` using `docker`
+	$(call binary,$@,php,php)
 
-bin/atoum: | docker-compose.yml bin/. .atoum.php vendor $(DOCKER_COMPOSE) ## <Install> Create wrapper for `atoum` using `docker`
-	$(call binary,$@,php-cli,/src/vendor/$@)
+bin/atoum: | docker-compose.yml bin/. .atoum.php vendor $(DOCKER_COMPOSE) ## <Binaries> Create wrapper for `atoum` using `docker`
+	$(call binary,$@,php,/src/vendor/$@)
 
-bin/composer: | docker-compose.yml bin/. .env $(DOCKER_COMPOSE) ## <Install> Create wrapper for `composer` using `docker`
+bin/composer: | docker-compose.yml bin/. .env $(DOCKER_COMPOSE) ## <Binaries> Create wrapper for `composer` using `docker`
 	$(call binary,$@,composer,composer)
 
-bin/docker-compose: DOCKER_COMPOSE_VERSION=$(shell curl --silent "https://api.github.com/repos/docker/compose/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"([^"]+)".*/\1/') ## <Install> Create wrapper for `docker-compose` using `docker`
-bin/docker-compose: | $(call locate,curl) bin/. .env docker-compose.yml ## Create wrapper for `docker-compose` using `docker`
+bin/docker-compose: DOCKER_COMPOSE_VERSION=$(shell curl --silent "https://api.github.com/repos/docker/compose/releases/latest" | grep '"tag_name":' |  sed -E 's/.*"([^"]+)".*/\1/')
+bin/docker-compose: | $(call locate,curl) bin/. .env docker-compose.yml  ## <Binaries> Create wrapper for `docker-compose` using `docker`
 	curl -L --fail https://github.com/docker/compose/releases/download/$(DOCKER_COMPOSE_VERSION)/run.sh -o $@
 	chmod u+x $@
 
-vendor: vendor/autoload.php  ## <Install> Create `vendor` directory
+vendor: vendor/autoload.php  ## <Install> Create or recreate `vendor` directory
 
 vendor/autoload.php: composer.lock | bin/composer
 	bin/composer install
@@ -105,6 +113,15 @@ version/new/minor: | $(DOCKER_COMPOSE) ## <Versioning> Create tag for new minor 
 .PHONY: version/new/patch
 version/new/patch: | $(DOCKER_COMPOSE) ## <Versioning> Create tag for new patch version
 	$(call semver,patch)
+
+.PHONY: php/%
+php/%: | bin/composer ## <Environment> Switch PHP version, for example `make php/7.2`
+	@: $(if $(findstring $*,$(INSTALLED_PHP_VERSION)),,$(error PHP version $* is invalid, valid versions are $(INSTALLED_PHP_VERSION)))
+	$(call switch-php,$*)
+
+.PHONY: php/versions
+php/versions: ## <Environment> Display all available PHP versions
+	echo "Available PHP versions are $(INSTALLED_PHP_VERSION)"
 
 .PHONY: help
 help: ## <Help> Display this help.
