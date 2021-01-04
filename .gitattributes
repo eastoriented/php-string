@@ -1,12 +1,11 @@
-VERSION export-subst
-
+.atoum.php export-ignore
+.do_not_touch export-ignore
 .gitattributes export-ignore
+.github export-ignore
 .gitignore export-ignore
 Makefile export-ignore
-.do_not_touch export-ignore
-docker-compose.yml export-ignore
-.atoum.php export-ignore
-tests export-ignore
+VERSION export-subst
 composer.json export-ignore
 composer.lock export-ignore
-.github export-ignore
+docker-compose.yml export-ignore
+tests export-ignore
